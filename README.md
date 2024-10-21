@@ -58,7 +58,7 @@
    Continuing the legacy of Vanced
 </p>
 
-# 👋🧩 ReVanced Patches template
+# 👋🧩 ReVanced Patches by PG
 
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/ReVanced/revanced-patches-template/release.yml)
 ![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)
@@ -67,10 +67,7 @@ Template repository for ReVanced Patches.
 
 ## ❓ About
 
-This is a template to create a new ReVanced Patches repository.  
-The repository can have multiple patches, and patches from other repositories can be used together.
-
-For an example repository, see [ReVanced Patches](https://github.com/revanced/revanced-patches).
+The information provided in this repository is for educational purposes only. It is intended to help users understand certain technical concepts and should not be used in production environments or for any illegal activities. The author do not guarantee the accuracy, completeness, or reliability of the information and are not responsible for any errors, omissions, or any outcomes that result from its use. Use of this information is at your own risk. Always ensure that you comply with all relevant legal and ethical guidelines when using or implementing the information provided.
 
 ## 🚀 Get started
 
