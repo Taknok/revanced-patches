@@ -15,7 +15,10 @@ val callRecordingVoiceRemoverPatch = resourcePatch (
     name = "Call recording announcements remover",
     description = "Remove the announcements when starting or stopping a call recording",
 ) {
-    compatibleWith("com.google.android.dialer"("149.0.682953539-pixel2024"))
+    compatibleWith("com.google.android.dialer"(
+        "149.0.682953539",
+        "149.0.682953539-pixel2024",
+    ))
 
     val VOICE_STRINGS = arrayOf(
         "call_recording_starting_voice",
@@ -24,16 +27,21 @@ val callRecordingVoiceRemoverPatch = resourcePatch (
 
     execute { context ->
         VOICE_STRINGS.forEach { s ->
-            removeStringAllResources(context, s)
+            editStringAllResources(context, s, " ")
         }
+        editStringAllResources(context, "search_bar_hint", ".", Operation.APPEND)
     }
 
 }
 
-private fun removeStringResources(
+private enum class Operation { SUBSTITUTE, APPEND }
+
+private fun editStringResources(
     context: ResourcePatchContext,
     resource: String,
-    stringName: String
+    stringName: String,
+    stringValue: String,
+    operation: Operation = Operation.SUBSTITUTE,
 ) {
     try {
         context.document[resource].use { document ->
@@ -43,16 +51,24 @@ private fun removeStringResources(
                 .mapNotNull { nodeList.item(it) as? Element }
                 .firstOrNull { it.getAttribute("name") == stringName }
 
-            stringNode?.textContent = ""
+            when (operation) {
+                Operation.SUBSTITUTE -> stringNode?.textContent = stringValue
+                Operation.APPEND -> stringNode?.textContent = stringNode?.textContent.plus(stringValue)
+            }
         }
     } catch (_: FileNotFoundException) {
         // Ignoring missing file
     }
 }
 
-private fun removeStringAllResources(context: ResourcePatchContext, stringName: String) {
+private fun editStringAllResources(
+    context: ResourcePatchContext,
+    stringName: String,
+    stringValue: String,
+    operation: Operation = Operation.SUBSTITUTE
+) {
     // Remove from res/values/strings.xml
-    removeStringResources(context, "res/values/strings.xml", stringName)
+    editStringResources(context, "res/values/strings.xml", stringName, stringValue, operation)
 
     // Process res/values-*/strings.xml directories
     val apkFiles = context["."].toPath()
@@ -62,6 +78,6 @@ private fun removeStringAllResources(context: ResourcePatchContext, stringName: 
 
     valuesDirs.forEach { dir ->
         val relativePath = dir.relativeTo(apkFiles).toString()
-        removeStringResources(context, "$relativePath/strings.xml", stringName)
+        editStringResources(context, "$relativePath/strings.xml", stringName, stringValue, operation)
     }
 }
