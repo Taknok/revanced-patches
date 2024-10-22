@@ -5,6 +5,7 @@ import app.revanced.patcher.patch.ResourcePatchContext
 import org.w3c.dom.Element
 import java.io.FileNotFoundException
 import java.nio.file.Files
+import java.util.logging.Logger
 import kotlin.io.path.isDirectory
 import kotlin.io.path.name
 import kotlin.io.path.relativeTo
@@ -30,6 +31,7 @@ val callRecordingVoiceRemoverPatch = resourcePatch (
             editStringAllResources(context, s, " ")
         }
         editStringAllResources(context, "search_bar_hint", ".", Operation.APPEND)
+        Logger.getLogger(this::class.java.name).info("Adding '.' to search hint to visually detect patched app")
     }
 
 }
