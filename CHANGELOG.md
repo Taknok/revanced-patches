@@ -1,3 +1,10 @@
+# 1.0.0 (2024-10-24)
+
+
+### Features
+
+* Adding patch to remove the call recording voice announcement ([a4046c3](https://github.com/Taknok/revanced-patches/commit/a4046c3e1724085b4a5a14ff63e42d311e11275d))
+
 ## [1.0.3](https://github.com/ReVanced/revanced-patches-template/compare/v1.0.2...v1.0.3) (2024-09-08)
 
 
