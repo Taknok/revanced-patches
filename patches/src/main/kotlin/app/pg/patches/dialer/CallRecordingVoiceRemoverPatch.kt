@@ -16,10 +16,7 @@ val callRecordingVoiceRemoverPatch = resourcePatch (
     name = "Call recording announcements remover",
     description = "Remove the announcements when starting or stopping a call recording",
 ) {
-    compatibleWith("com.google.android.dialer"(
-        "149.0.682953539",
-        "149.0.682953539-pixel2024",
-    ))
+    compatibleWith("com.google.android.dialer")
 
     val VOICE_STRINGS = arrayOf(
         "call_recording_starting_voice",
