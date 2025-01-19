@@ -58,7 +58,7 @@
    Continuing the legacy of Vanced
 </p>
 
-# 👋🧩 ReVanced Patches template
+# 👋🧩 ReVanced Patches by PG
 
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/ReVanced/revanced-patches-template/release.yml)
 ![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)

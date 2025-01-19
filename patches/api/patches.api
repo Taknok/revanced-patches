@@ -1,4 +1,4 @@
-public final class app/revanced/patches/example/ExamplePatchKt {
-	public static final fun getExamplePatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+public final class app/pg/patches/dialer/CallRecordingVoiceRemoverPatchKt {
+	public static final fun getCallRecordingVoiceRemoverPatch ()Lapp/revanced/patcher/patch/ResourcePatch;
 }
 
