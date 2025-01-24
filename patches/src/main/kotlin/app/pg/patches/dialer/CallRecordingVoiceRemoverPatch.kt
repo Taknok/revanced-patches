@@ -24,7 +24,8 @@ val callRecordingVoiceRemoverPatch = resourcePatch (
         "call_recording_ending_voice",
     )
 
-    execute { context ->
+    execute {
+        val context = this;
         VOICE_STRINGS.forEach { s ->
             editStringAllResources(context, s, " ")
         }
@@ -44,7 +45,7 @@ private fun editStringResources(
     operation: Operation = Operation.SUBSTITUTE,
 ) {
     try {
-        context.document[resource].use { document ->
+        context.document(resource).use { document ->
             val nodeList = document.getElementsByTagName("string")
             val stringNode: Element? = (0 until nodeList.length)
                 .asSequence()
