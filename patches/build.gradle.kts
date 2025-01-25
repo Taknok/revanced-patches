@@ -1,13 +1,13 @@
-group = "app.revanced"
+group = "app.pg"
 
 patches {
     about {
-        name = "ReVanced Patches template"
-        description = "Patches template for ReVanced"
-        source = "git@github.com:revanced/revanced-patches-template.git"
-        author = "ReVanced"
-        contact = "contact@revanced.app"
-        website = "https://revanced.app"
+        name = "ReVanced Patches by PG"
+        description = "Patches for ReVanced by PG"
+        source = "git@github.com:Taknok/revanced-patches.git"
+        author = "Taknok"
+        contact = "dev@deeper-wire.com"
+        website = "https://github.com/Taknok/revanced-patches"
         license = "GNU General Public License v3.0"
     }
 }
