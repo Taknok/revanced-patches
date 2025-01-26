@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Taknok/revanced-patches/compare/v1.0.0...v1.1.0) (2025-01-26)
+
+
+### Features
+
+* sleep 60s after patch ([f66b1dd](https://github.com/Taknok/revanced-patches/commit/f66b1ddf383d0a8f71b2f42fb92f164ae50d7dd3))
+
 # [1.1.0-dev.1](https://github.com/Taknok/revanced-patches/compare/v1.0.0...v1.1.0-dev.1) (2025-01-26)
 
 
