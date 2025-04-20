@@ -46,7 +46,7 @@ private fun editStringResources(
     operation: Operation = Operation.SUBSTITUTE,
 ) {
     try {
-        context.document(resource).use { document ->
+        context.document(resource, fixSurrogate = true).use { document ->
             val nodeList = document.getElementsByTagName("string")
             val stringNode: Element? = (0 until nodeList.length)
                 .asSequence()
