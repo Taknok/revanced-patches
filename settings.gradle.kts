@@ -6,7 +6,7 @@ pluginManagement {
         google()
         maven {
             name = "githubPackages"
-            url = uri("https://maven.pkg.github.com/revanced/revanced-patches-template")
+            url = uri("https://maven.pkg.github.com/revanced/revanced-patches-gradle-plugin")
             credentials(PasswordCredentials::class)
         }
     }
