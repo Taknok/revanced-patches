@@ -1,4 +1,7 @@
 # [1.1.0](https://github.com/Taknok/revanced-patches/compare/v1.0.0...v1.1.0) (2025-01-26)
+## [1.0.5-dev.1](https://github.com/ReVanced/revanced-patches-template/compare/v1.0.4...v1.0.5-dev.1) (2026-02-21)
+
+## [1.0.4](https://github.com/ReVanced/revanced-patches-template/compare/v1.0.3...v1.0.4) (2024-11-05)
 
 
 ### Features
