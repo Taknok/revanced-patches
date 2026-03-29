@@ -1,3 +1,10 @@
+# [1.2.0-dev.1](https://github.com/Taknok/revanced-patches/compare/v1.1.0...v1.2.0-dev.1) (2026-03-29)
+
+
+### Features
+
+* Use named parameter ([a48fd8e](https://github.com/Taknok/revanced-patches/commit/a48fd8e7907d3ae7eaa9928a7155817b2946bd36))
+
 # [1.1.0](https://github.com/Taknok/revanced-patches/compare/v1.0.0...v1.1.0) (2025-01-26)
 ## [1.0.5-dev.1](https://github.com/ReVanced/revanced-patches-template/compare/v1.0.4...v1.0.5-dev.1) (2026-02-21)
 
