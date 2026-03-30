@@ -4,6 +4,14 @@ import app.revanced.patcher.patch.bytecodePatch
 import app.revanced.patcher.patch.longOption
 
 @Suppress("unused")
+val StartPausePatcher = bytecodePatch (
+    name = "Start Pause Patcher",
+    description = "Notify the start of the pause.",
+    use = false,
+) {}
+
+
+@Suppress("unused")
 val PausePatcher = bytecodePatch (
     name = "Pause Patcher",
     description = "Pause the patcher Xs bat the end of the process",
@@ -15,6 +23,8 @@ val PausePatcher = bytecodePatch (
         default = 120,
         validator = { it == null || it > 0 },
     )
+
+    dependsOn(StartPausePatcher)
 
     afterDependents {
         Thread.sleep(pauseDurationOption?.times(1000)!!)
