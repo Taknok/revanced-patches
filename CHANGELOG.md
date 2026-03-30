@@ -1,3 +1,10 @@
+# [1.2.0-dev.2](https://github.com/Taknok/revanced-patches/compare/v1.2.0-dev.1...v1.2.0-dev.2) (2026-03-30)
+
+
+### Bug Fixes
+
+* Add notification for starting the pause ([0bede9a](https://github.com/Taknok/revanced-patches/commit/0bede9a742b5420b94824a2ca8bef3e3c0086a3e))
+
 # [1.2.0-dev.1](https://github.com/Taknok/revanced-patches/compare/v1.1.0...v1.2.0-dev.1) (2026-03-29)
 
 
